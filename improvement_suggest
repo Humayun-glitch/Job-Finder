@@ -1,0 +1,12 @@
+def get_improvement_suggestions(cv_details, desired_role):
+    suggestions = []
+    required_skills = ["Python", "Machine Learning", "Data Analysis"]  # Example skills for the desired role
+    
+    for skill in required_skills:
+        if skill not in cv_details["skills"]:
+            suggestions.append(f"Consider adding {skill} to your CV.")
+    
+    if not cv_details["experience"]:
+        suggestions.append("Highlight your work experience more clearly.")
+    
+    return suggestions
